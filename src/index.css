@@ -19,7 +19,10 @@ a:hover {
   border-radius: 10px;
   width: max-content;
 }
-
+.activemenu {
+  background-color: #fff !important;
+  color: #000 !important;
+}
 .DashCard {
   width: 100%;
 }
@@ -31,4 +34,29 @@ a:hover {
   border: solid 1px #e4e4e4;
   border-radius: 10px;
   padding: 5px 10px;
+}
+
+.rt-TabsList {
+  /* box-shadow: inset 0 -1px 0 0 var(--gray-a5); */
+  box-shadow: none !important;
+}
+
+.rt-TabsTrigger:where([data-state="active"])::before {
+  background-color: var(--gray-12) !important;
+}
+
+.button {
+  background-color: var(--blue-4);
+  color: var(--blue-11);
+  border-color: var(--blue-7);
+}
+span.notbadge {
+  padding: 1px 5px;
+  font-size: 10px !important;
+  margin-left: 3px;
+  margin-top: -7px;
+}
+button.download {
+  background-color: #000;
+  cursor: pointer;
 }
