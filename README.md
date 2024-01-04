@@ -5,7 +5,7 @@ Målet är att återskapa kontrollpanelen som finns på [denna sida](https://ui.
 
 ## Uppgift live länk
 
--
+- [https://chas-radix-dashboard.vercel.app/](https://chas-radix-dashboard.vercel.app/)
 
 ## Tech stack
 
