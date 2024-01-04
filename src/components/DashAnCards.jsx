@@ -1,4 +1,4 @@
-import { Flex, Text, Card, Grid } from "@radix-ui/themes";
+import { Flex, Text, Box, Card, Badge, Grid } from "@radix-ui/themes";
 import {
   AvatarIcon,
   LightningBoltIcon,
@@ -6,7 +6,7 @@ import {
   TargetIcon,
 } from "@radix-ui/react-icons";
 
-function DashCards() {
+function DashAnCards() {
   return (
     <Grid
       columns={{
@@ -20,54 +20,62 @@ function DashCards() {
     >
       <Card size="3" className="DashCard">
         <Flex justify="between">
-          <Text size="2">Total Revenue</Text>
+          <Text size="2">Views</Text>
           <TargetIcon />
         </Flex>
         <Flex direction="column">
           <Text weight="bold" size="6">
-            $45,231.89
+            87.248
           </Text>
-          <Text size="1">+20.1% from last month</Text>
+          <Text size="1">
+            <Badge color="green">+48%</Badge>from last month
+          </Text>
         </Flex>
       </Card>
       <Card size="3" className="DashCard">
         <Flex justify="between">
-          <Text size="2">Subscriptions</Text>
+          <Text size="2">Visitors</Text>
           <AvatarIcon />
         </Flex>
         <Flex direction="column">
           <Text weight="bold" size="6">
-            +2350
+            45.345
           </Text>
-          <Text size="1">+180.1% from last month</Text>
+          <Text size="1">
+            <Badge color="green">+48%</Badge> from last month
+          </Text>
         </Flex>
       </Card>
       <Card size="3" className="DashCard">
         <Flex justify="between">
-          <Text size="2">Sales</Text>
+          <Text size="2">Bounce rate</Text>
           <RocketIcon />
         </Flex>
         <Flex direction="column">
           <Text weight="bold" size="6">
-            +12,234
+            47%
           </Text>
-          <Text size="1">+19% from last month</Text>
+          <Text size="1">
+            <Badge color="red">-12%</Badge> from last month
+          </Text>
         </Flex>
       </Card>
       <Card size="3" className="DashCard">
         <Flex justify="between">
-          <Text size="2">Active Now</Text>
+          <Text size="2">Average visit time</Text>
           <LightningBoltIcon />
         </Flex>
         <Flex direction="column">
           <Text weight="bold" size="6">
-            +573
+            8m 7s
           </Text>
-          <Text size="1">+201 since last hour</Text>
+          <Text size="1">
+            <Badge color="green">+18%</Badge> since last month
+          </Text>
         </Flex>
       </Card>
     </Grid>
   );
 }
 
-export default DashCards;
+export default DashAnCards;

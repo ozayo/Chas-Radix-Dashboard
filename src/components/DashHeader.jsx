@@ -21,7 +21,7 @@ import {
 
 function DashHeader() {
   return (
-    <Box>
+    <Box mt="2">
       <Flex gap="3" justify="between" align="center">
         <Box width="20%">
           <DropdownMenu.Root>
