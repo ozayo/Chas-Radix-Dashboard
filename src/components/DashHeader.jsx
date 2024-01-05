@@ -8,7 +8,7 @@ import {
   TextField,
   Avatar,
   DropdownMenu,
-  Card,
+  IconButton,
 } from "@radix-ui/themes";
 import {
   MagnifyingGlassIcon,
@@ -17,6 +17,7 @@ import {
   PlusCircledIcon,
   CheckIcon,
   LockOpen1Icon,
+  HamburgerMenuIcon,
 } from "@radix-ui/react-icons";
 
 function DashHeader() {
@@ -61,15 +62,21 @@ function DashHeader() {
             </DropdownMenu.Content>
           </DropdownMenu.Root>
         </Box>
-        <Box width="50%">
+        <Box
+          width="50%"
+          display={{ initial: "none", xs: "block", md: "block" }}
+          className="mainmenu"
+        >
           <Flex gap="3" justify="start" align="center">
-            <a href="#">Overview</a>
+            <a href="#" className="active">
+              Overview
+            </a>
             <a href="#">Customers</a>
             <a href="#">Products</a>
             <a href="#">Settings</a>
           </Flex>
         </Box>
-        <Box width="20%">
+        <Box width="20%" display={{ initial: "none", xs: "none", md: "block" }}>
           <TextField.Root>
             <TextField.Slot>
               <MagnifyingGlassIcon height="16" width="16" />
@@ -77,7 +84,53 @@ function DashHeader() {
             <TextField.Input placeholder="Search the docs…" />
           </TextField.Root>
         </Box>
-        <Box width="10%">
+
+        {/* Mobile menu */}
+        <Box width="10%" display={{ initial: "block", xs: "none", md: "none" }}>
+          {/* Mobile Search */}
+          <IconButton className="burgermenu" mr="2">
+            <MagnifyingGlassIcon width="18" height="18" />
+          </IconButton>
+          {/* Mobile Search End */}
+          <DropdownMenu.Root>
+            <DropdownMenu.Trigger>
+              <IconButton className="burgermenu">
+                <HamburgerMenuIcon width="20" height="20" />
+              </IconButton>
+            </DropdownMenu.Trigger>
+            <DropdownMenu.Content>
+              <DropdownMenu.Item>Overview</DropdownMenu.Item>
+              <DropdownMenu.Item>Customers</DropdownMenu.Item>
+              <DropdownMenu.Item>Products</DropdownMenu.Item>
+              <DropdownMenu.Item>Settings</DropdownMenu.Item>
+              <DropdownMenu.Separator />
+              <DropdownMenu.Item>
+                <Text as="div" size="2" weight="bold">
+                  ozayo
+                </Text>
+              </DropdownMenu.Item>
+              <DropdownMenu.Item>
+                <Text as="div" size="1">
+                  ozay.ozdemir@chasacademy.se
+                </Text>
+              </DropdownMenu.Item>
+
+              <DropdownMenu.Separator />
+              <DropdownMenu.Item>Profile</DropdownMenu.Item>
+              <DropdownMenu.Item>Billing</DropdownMenu.Item>
+              <DropdownMenu.Separator />
+              <DropdownMenu.Item color="red">
+                Log out
+                <LockOpen1Icon />
+              </DropdownMenu.Item>
+            </DropdownMenu.Content>
+          </DropdownMenu.Root>
+        </Box>
+        {/* Mobile menu end */}
+        <Box
+          width="10%"
+          display={{ initial: "none", xs: "block", md: "block" }}
+        >
           <DropdownMenu.Root>
             <DropdownMenu.Trigger>
               <Avatar

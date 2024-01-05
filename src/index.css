@@ -12,6 +12,13 @@ a {
 a:hover {
   color: #4a4a4a;
 }
+.mainmenu a {
+  color: #7e7e87;
+}
+.mainmenu a.active,
+.mainmenu a:hover {
+  color: #000000;
+}
 
 .dashmenu {
   background-color: #f4f4f5;
@@ -32,7 +39,7 @@ a:hover {
 .submenu {
   cursor: pointer;
   border: solid 1px #e4e4e4;
-  border-radius: 10px;
+  border-radius: 5px;
   padding: 5px 10px;
 }
 
@@ -80,4 +87,29 @@ button.multidatebut {
 }
 button.multidatebut:hover {
   background-color: #f4f4f5;
+}
+button.downico {
+  background-color: #000;
+  cursor: pointer;
+}
+.rt-RadioGroupIndicator {
+  background-color: #000 !important;
+}
+.rt-RadioGroupRoot:where(.rt-variant-surface)
+  :where(.rt-RadioGroupButton[data-state="checked"]) {
+  background-color: #e0e0e0 !important;
+}
+.rt-SwitchButton:where([data-state="checked"])::before {
+  background-image: linear-gradient(
+    to right,
+    #000000 40%,
+    transparent 60%
+  ) !important;
+}
+.rt-CheckboxButton:where(.rt-variant-surface):where([data-state="checked"]) {
+  background-color: #000 !important;
+}
+.rt-IconButton.burgermenu {
+  background-color: #000;
+  cursor: pointer;
 }
