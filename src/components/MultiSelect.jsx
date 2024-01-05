@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import { format, isAfter, isBefore, isValid, parse } from "date-fns";
 import { DayPicker } from "react-day-picker";
+import "react-day-picker/dist/style.css";
 
 import { Popover, Button } from "@radix-ui/themes";
 import { CalendarIcon } from "@radix-ui/react-icons";
