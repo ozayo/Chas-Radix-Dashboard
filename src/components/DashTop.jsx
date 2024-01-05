@@ -15,13 +15,23 @@ import DashNot from "./DashNot";
 import DashAnCards from "./DashAnCards";
 import DashAnCarts from "./DashAnCarts";
 import DashAnInfos from "./DashAnInfos";
-import Test from "./test";
+import DashReport from "./DashReport";
 import MultiSelect from "./MultiSelect";
 
 function DashTop() {
   return (
     <Box mt="5">
-      <Flex gap="3" justify="between" align="center" mb="4">
+      <Flex
+        gap="3"
+        justify="between"
+        align="center"
+        mb="4"
+        direction={{
+          initial: "column",
+          xs: "row",
+          md: "row",
+        }}
+      >
         <Box>
           <Heading>Dashboard</Heading>
         </Box>
@@ -74,8 +84,7 @@ function DashTop() {
           </Tabs.Content>
 
           <Tabs.Content value="reports">
-            {/* <Test /> */}
-            <MultiSelect />
+            <DashReport />
           </Tabs.Content>
           <Tabs.Content value="notifications">
             <DashNot />
