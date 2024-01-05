@@ -59,4 +59,25 @@ span.notbadge {
 button.download {
   background-color: #000;
   cursor: pointer;
+  color: #fff;
+}
+form.ma2 input {
+  border: none;
+  background-color: transparent;
+  color: #000;
+  cursor: pointer;
+  width: 77px;
+  text-align: center;
+}
+form.ma2 input::placeholder {
+  color: #000;
+}
+button.multidatebut {
+  background-color: transparent;
+  border: solid 1px #e4e4e7;
+  color: #000;
+  cursor: pointer;
+}
+button.multidatebut:hover {
+  background-color: #f4f4f5;
 }

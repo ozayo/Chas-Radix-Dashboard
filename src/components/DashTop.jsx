@@ -15,6 +15,8 @@ import DashNot from "./DashNot";
 import DashAnCards from "./DashAnCards";
 import DashAnCarts from "./DashAnCarts";
 import DashAnInfos from "./DashAnInfos";
+import Test from "./test";
+import MultiSelect from "./MultiSelect";
 
 function DashTop() {
   return (
@@ -24,7 +26,8 @@ function DashTop() {
           <Heading>Dashboard</Heading>
         </Box>
         <Box>
-          <Button size="2" className="download">
+          <MultiSelect />
+          <Button size="2" className="download" ml="2">
             Download
           </Button>
         </Box>
@@ -71,9 +74,8 @@ function DashTop() {
           </Tabs.Content>
 
           <Tabs.Content value="reports">
-            <Text size="2">
-              Edit your profile or update contact information.
-            </Text>
+            {/* <Test /> */}
+            <MultiSelect />
           </Tabs.Content>
           <Tabs.Content value="notifications">
             <DashNot />
